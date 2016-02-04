@@ -1,0 +1,99 @@
+/*
+* Change these values to adjust size of sidekick.
+* Ideally they are the same values.
+*/
+.sidekick-body {
+  width: 400px;
+}
+body.sidekick--is-on {
+  left: 400px;
+}
+
+/*
+* Helper Classes
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*
+* Basic Styling
+*/
+.sidekick-body {
+  padding: 2em;
+}
+
+.sidekick-toggle svg {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+* Required to work
+*/
+.sidekick {
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+  .sidekick input[type="checkbox"] {
+    display: none;
+  }
+
+  .sidekick-panel {
+    width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: width 200ms;
+  }
+
+  .sidekick-toggle {
+    color: black;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: white;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: -4em;
+    top: 2em;
+    cursor: pointer;
+  }
+
+  /*
+  *  Menu Toggle Functionality
+  */
+  input[type="checkbox"]:checked + .sidekick-toggle {
+    background-color: #ccc;
+  }
+
+  input[type="checkbox"]:checked ~ .sidekick-panel {
+    width: 100%;
+  }
+
+/*
+* Page slide animation.
+* This is only required if including the javascript sidekickToggle() function.
+*/
+body {
+  transition: left 200ms;
+  position: relative;
+  left: 0;
+}
+body.sidekick--is-on {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}

@@ -1,0 +1,40 @@
+body {
+  background-color: #f2f2f2;
+  padding: 5em 10em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav h1 {
+  margin: 0 0 1em 0;
+  font-weight: lighter;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  background: rgba(255,255,255,0.1);
+}
+
+nav li:nth-child(2n+1) {
+  background: rgba(0,0,0,0.1);
+}
+
+nav ul a {
+  display: block;
+  color: white;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  background: black;
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sidekick Demo</title>
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/sidekick.css" rel="stylesheet">
+  <body class="sidekick-demo">
+
+    <!--
+    Required markup
+    Watch out, order matters!
+    Especially: #sidekickToggle, .sidekick-toggle, .sidekick-panel
+    -->
+    <div class="sidekick">
+      <input type="checkbox" id="sidekickToggle">
+      <label class="sidekick-toggle" for="sidekickToggle">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <g>
+        	<rect x="96" y="241" width="320" height="32"/>
+        	<rect x="96" y="145" width="320" height="32"/>
+        	<rect x="96" y="337" width="320" height="32"/>
+        </g>
+        </svg>
+        <span class="sr-only">Menu Toggle</span>
+      </label>
+      <nav class="sidekick-panel">
+        <div class="sidekick-body">
+          <h1>Sidekick Menu</h1>
+          <ul>
+            <li><a href="#">Nav Item 1</a></li>
+            <li><a href="#">Nav Item 2</a></li>
+            <li><a href="#">Nav Item 3</a></li>
+            <li><a href="#">Nav Item 4</a></li>
+          </ul>
+        </div>
+      </nav><!-- .sidekick-panel -->
+    </div><!-- .sidekick -->
+
+    <!--
+    Author's Page
+    -->
+    <h1>Sidekick Demo</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <hr>
+    <h2>Documentation Will Go Here</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nihil provident similique alias, ea omnis, rem nostrum quaerat corporis fugit recusandae beatae reprehenderit error reiciendis cum, dolore facilis! Non, dolores.
+
+<!--
+Optional javascript. This will add a body class onclick.
+Include this script if you wish to have the page slide along with the menu
+Not necessary for the basic menu functionality.
+-->
+<script type="text/javascript">
+  var sidekickToggle = function() {
+      var sidekickBody = document.getElementsByTagName("body")[0];
+      if (this.checked) {
+        sidekickBody.classList.add("sidekick--is-on");
+      } else {
+        sidekickBody.classList.remove("sidekick--is-on");
+      }
+  }
+  document.getElementById('sidekickToggle').onclick = sidekickToggle;
+</script>

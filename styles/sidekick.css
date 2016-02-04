@@ -2,11 +2,18 @@
 * Change these values to adjust size of sidekick.
 * Ideally they are the same values.
 */
+body {
+  transition: left 250ms ease-in-out;
+}
+.sidekick,
+.sidekick-panel {
+  transition: all 250ms ease-in-out;
+}
 .sidekick-body {
-  width: 400px;
+  width: 25rem;
 }
 body.sidekick--is-on {
-  left: 400px;
+  left: 25rem;
 }
 
 /*
@@ -40,8 +47,6 @@ body.sidekick--is-on {
 */
 .sidekick {
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
   position: fixed;
   left: 0;
   top: 0;
@@ -54,9 +59,11 @@ body.sidekick--is-on {
 
   .sidekick-panel {
     width: 0;
+    height: 100%;
     overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
     box-sizing: border-box;
-    transition: width 200ms;
   }
 
   .sidekick-toggle {
@@ -88,7 +95,6 @@ body.sidekick--is-on {
 * This is only required if including the javascript sidekickToggle() function.
 */
 body {
-  transition: left 200ms;
   position: relative;
   left: 0;
 }

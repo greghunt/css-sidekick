@@ -76,9 +76,11 @@
     border: 1px solid #ccc;
     position: absolute;
     z-index: 99;
-    right: 2em;
+    left: 2em;
     top: 2em;
     cursor: pointer;
+    margin-left: 0;
+    transition: margin-left 250ms ease-in-out;
   }
 
   /*
@@ -86,12 +88,13 @@
   */
   input[type="checkbox"]:checked + .sidekick-toggle {
     background-color: #ccc;
+    margin-left: 40%;
   }
 
   input[type="checkbox"]:checked ~ .sidekick {
     transform: translateX(0);
   }
 
-  input[type="checkbox"]:checked ~ .sidekick .sidekick-panel {
+  input[type="checkbox"]:checked ~ .sidekick {
     position: fixed;
   }

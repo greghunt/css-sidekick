@@ -1,6 +1,5 @@
 body {
   background-color: #f2f2f2;
-  padding: 5em 10em;
 }
 
 a {
@@ -8,7 +7,7 @@ a {
 }
 
 nav h1 {
-  margin: 0 0 1em 0;
+  margin: 1em;
   font-weight: lighter;
 }
 
